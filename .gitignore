@@ -1,0 +1,11 @@
+*.zip
+*~
+*.bak
+*.iml
+target
+target-eclipse
+.settings
+.link_to_grails_plugins
+.idea
+.slcache
+web-app/WEB-INF/classes
