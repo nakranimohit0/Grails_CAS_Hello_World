@@ -119,3 +119,21 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+app_server_url = 'http://my-local-server.domain.com:8080'
+app_cas_url = 'http://auth.domain.com/idp/profile/cas'
+
+grails {
+	plugin {
+		springsecurity {
+			cas {
+				active = true
+				serviceUrl = "${app_server_url}/${appName}/j_spring_cas_security_check"
+				serverUrlPrefix = app_cas_url
+				loginUri = '/login'
+//				useSamlValidator = true
+				useSingleSignout = false
+			}
+		}
+	}
+}
